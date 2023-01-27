@@ -1,0 +1,1 @@
+sudo docker run -d -p 8090:8080 --name airflow -e LOAD_EX=y -v /home/manu/airflow/dags:/opt/airflow/dags -v /var/run/docker.sock:/var/run/docker.sock --user manu:airflow custom-airflow bash -c "airflow db init && airflow webserver"

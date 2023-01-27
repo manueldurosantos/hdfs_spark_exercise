@@ -1,0 +1,27 @@
+[2023-01-27T03:10:10.715+0100] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: hdfs_spark_dag.download_data manual__2023-01-27T02:09:46.219177+00:00 [queued]>
+[2023-01-27T03:10:10.729+0100] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: hdfs_spark_dag.download_data manual__2023-01-27T02:09:46.219177+00:00 [queued]>
+[2023-01-27T03:10:10.729+0100] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-27T03:10:10.730+0100] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-27T03:10:10.730+0100] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-27T03:10:10.755+0100] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): download_data> on 2023-01-27 02:09:46.219177+00:00
+[2023-01-27T03:10:10.758+0100] {standard_task_runner.py:55} INFO - Started process 12038 to run task
+[2023-01-27T03:10:10.760+0100] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'hdfs_spark_dag', 'download_data', 'manual__2023-01-27T02:09:46.219177+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/hdfs_spark_dag.py', '--cfg-path', '/tmp/tmpqj7t2y_5']
+[2023-01-27T03:10:10.762+0100] {standard_task_runner.py:83} INFO - Job 169: Subtask download_data
+[2023-01-27T03:10:10.803+0100] {task_command.py:388} INFO - Running <TaskInstance: hdfs_spark_dag.download_data manual__2023-01-27T02:09:46.219177+00:00 [running]> on host LAPTOP-J6R38EUB.localdomain
+[2023-01-27T03:10:10.855+0100] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=hdfs_spark_dag
+AIRFLOW_CTX_TASK_ID=download_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-27T02:09:46.219177+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-27T02:09:46.219177+00:00
+[2023-01-27T03:10:10.856+0100] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-27T03:10:10.857+0100] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        sudo docker exec -it docker-hadoop_namenode_1 sh -c "hadoop fs -get /output/output.txt /hadoop/data/output.txt"\n    ']
+[2023-01-27T03:10:10.861+0100] {subprocess.py:86} INFO - Output:
+[2023-01-27T03:10:12.990+0100] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-01-27T03:10:13.011+0100] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=hdfs_spark_dag, task_id=download_data, execution_date=20230127T020946, start_date=20230127T021010, end_date=20230127T021013
+[2023-01-27T03:10:13.063+0100] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-27T03:10:13.072+0100] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

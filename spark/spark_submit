@@ -1,0 +1,1 @@
+ sudo docker compose run spark spark-submit --master spark://spark:7077 bye.py
